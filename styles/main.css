@@ -232,4 +232,57 @@ body {
   display: inline-block;
   width: 100%;
 }
+
+#other-projects {
+  max-width: 400px;
+  width: 100%;
+  color: #0A0908;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+#other-projects .indent {
+  display: block;
+  margin: auto;
+  width: 360px;
+  padding: 1rem 2rem;
+}
+
+#other-projects .col-small {
+  display: block;
+  margin: auto;
+  width: 360px;
+  padding: 1rem 2rem;
+  color: #5E503F;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#other-projects .col-large .title {
+  font-weight: 600;
+  font-style: italic;
+  color: #49111C;
+  margin-left: 2rem;
+  display: inline-block;
+}
+
+#other-projects .col-large .title a {
+  display: inline-block;
+}
+
+#other-projects .col-large .technologies {
+  display: block;
+}
+
+#other-projects .col-large .technologies li {
+  display: inline-block;
+  color: #49111C;
+  border: 1px solid #49111C;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 2px;
+}
 /*# sourceMappingURL=main.css.map */

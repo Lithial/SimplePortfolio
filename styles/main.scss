@@ -150,3 +150,37 @@ body{
     }
 
 }
+
+#other-projects{
+    @include common-descriptor-setup;
+    .indent{
+        @include mobile-padding();
+    }  
+    .col-small{
+        @include mobile-padding();
+        @include common-header();
+    }
+    .col-large{
+        
+        .title{
+            @include strong-description();
+            margin-left: 2rem;
+            display: inline-block;
+            a{
+                display: inline-block;
+            }
+        }
+        .technologies{
+            display: block;
+            li{
+                display: inline-block;
+                color: $primaryMiddle;
+                border: 1px solid $primaryMiddle;
+                border-radius: 8px;
+                padding: 5px;
+                margin: 2px;
+            }
+        }
+    }  
+   
+}
