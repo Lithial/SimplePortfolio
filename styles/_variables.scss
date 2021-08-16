@@ -1,0 +1,14 @@
+$primaryDark: #0A0908;
+$primaryMiddle: #49111C;
+$primaryLight: #F2F4F3;
+$secondaryDark: #5E503F;
+$secondaryLight: #A9927D;
+
+// Named Breakpoint Values
+$breakpoints: (
+  small: 320px,
+  medium: 640px,
+  large: 1024px,
+  x-large: 1600px,
+  xx-large: 2800px,
+);

@@ -1,0 +1,152 @@
+@import './reset';
+@import './variables';
+@import './breakpoints';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&display=swap');
+
+@mixin strong-description{
+    font-weight: 600;
+    font-style: italic;
+    color: $primaryMiddle
+}
+@mixin mobile-padding(){
+    display: block;
+    margin: auto;
+    width: 360px;
+    padding: 1rem 2rem;
+}
+@mixin common-header {
+    color: $secondaryDark;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: $primaryLight;
+}
+
+#introduction{
+    /*dimensions*/
+    height: 100vh;
+    margin: auto;
+    padding: 2rem 3rem;
+    /*font*/
+    font-size: 2em;
+    font-weight: 200;
+    line-height: 3rem;
+    color: $primaryDark;
+
+
+    @include breakpoints(medium){
+        padding: 2rem 6rem;
+
+    }
+    @mixin common-padding-intro {
+        padding: 3rem 0 2rem;
+
+    }
+    .greeting{
+        @include common-padding-intro();
+        display: inline-block;
+
+        img{
+            display: inline-block;
+            margin-left:  32px;
+            padding-left: 32px;
+            width: 128px;
+        }
+       
+    }
+    .description{
+        @include common-padding-intro();
+        strong{
+            @include strong-description();
+        }
+    }
+    .contact{
+        @include common-padding-intro();
+        font-size: .8em;
+        font-weight: 100;
+        a{
+            text-decoration: none;
+            color: inherit;
+            word-wrap: break-word;
+        }
+        img{
+            height: 35px;
+            width: 35px;
+            vertical-align: middle;
+        }
+    }
+}
+
+@mixin common-descriptor-setup {
+    max-width: 400px;
+    width: 100%;
+    color: $primaryDark;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+    padding: 1rem 2rem;
+}
+#about-me{
+   @include common-descriptor-setup;
+    .col-small{
+
+        @include mobile-padding();
+        @include common-header();
+    }
+    .col-large{
+        @include mobile-padding();
+        p{
+            padding-bottom: 1rem;
+        }
+        strong{
+            @include strong-description();
+        }
+    }
+}
+
+#skills{
+    @include common-descriptor-setup;
+
+    .col-small{
+
+        @include mobile-padding();
+        @include common-header();
+    }
+    .col-large{
+        @include mobile-padding();
+        .col-list{
+        
+            display: inline-block;
+            vertical-align: top;
+            padding: 1rem 1rem;
+            strong{
+                @include strong-description();
+            }
+        
+        }
+    }
+}
+
+#featured-projects{
+    @include common-descriptor-setup;
+
+    .col-small{
+        @include mobile-padding();
+        @include common-header();
+    }
+    .col-large{
+        @include mobile-padding();
+        strong{
+            @include strong-description();
+        }
+    }
+    #atlas-laptop{
+        display: inline-block;
+        width: 100%;
+    }
+
+}
