@@ -53,6 +53,10 @@ input {
 /*
 Found: https://ian.pvdindustrial.com/blog/mobile-first-scss-media-queries-mixin-20181115/
 */
+/*Used to make the surrounded text my stylized bold*/
+/*Padding function for the default mobile padding*/
+/* specific padding function*/
+/*Common font styles setup*/
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #F2F4F3;
@@ -117,8 +121,9 @@ body {
 }
 
 #about-me {
-  max-width: 400px;
+  min-width: 320px;
   width: 100%;
+  text-align: left;
   color: #0A0908;
   font-size: 1rem;
   font-weight: 200;
@@ -128,9 +133,9 @@ body {
 
 #about-me .col-small {
   display: block;
-  margin: auto;
-  width: 360px;
-  padding: 1rem 2rem;
+  width: 100%;
+  min-width: 320px;
+  padding: 1rem 1rem 1rem;
   color: #5E503F;
   font-size: 1.2rem;
   font-weight: bold;
@@ -139,9 +144,9 @@ body {
 
 #about-me .col-large {
   display: block;
-  margin: auto;
-  width: 360px;
-  padding: 1rem 2rem;
+  width: 100%;
+  min-width: 320px;
+  padding: 1rem 1rem 1rem;
 }
 
 #about-me .col-large p {
@@ -155,8 +160,9 @@ body {
 }
 
 #skills {
-  max-width: 400px;
+  min-width: 320px;
   width: 100%;
+  text-align: left;
   color: #0A0908;
   font-size: 1rem;
   font-weight: 200;
@@ -166,9 +172,9 @@ body {
 
 #skills .col-small {
   display: block;
-  margin: auto;
-  width: 360px;
-  padding: 1rem 2rem;
+  width: 100%;
+  min-width: 320px;
+  padding: 1rem 1rem 1rem;
   color: #5E503F;
   font-size: 1.2rem;
   font-weight: bold;
@@ -177,9 +183,9 @@ body {
 
 #skills .col-large {
   display: block;
-  margin: auto;
-  width: 360px;
-  padding: 1rem 2rem;
+  width: 100%;
+  min-width: 320px;
+  padding: 1rem 1rem 1rem;
 }
 
 #skills .col-large .col-list {
@@ -195,8 +201,9 @@ body {
 }
 
 #featured-projects {
-  max-width: 400px;
+  min-width: 320px;
   width: 100%;
+  text-align: left;
   color: #0A0908;
   font-size: 1rem;
   font-weight: 200;
@@ -206,9 +213,9 @@ body {
 
 #featured-projects .col-small {
   display: block;
-  margin: auto;
-  width: 360px;
-  padding: 1rem 2rem;
+  width: 100%;
+  min-width: 320px;
+  padding: 1rem 1rem 1rem;
   color: #5E503F;
   font-size: 1.2rem;
   font-weight: bold;
@@ -217,9 +224,9 @@ body {
 
 #featured-projects .col-large {
   display: block;
-  margin: auto;
-  width: 360px;
-  padding: 1rem 2rem;
+  width: 100%;
+  min-width: 320px;
+  padding: 1rem 1rem 1rem;
 }
 
 #featured-projects .col-large strong {
@@ -234,8 +241,9 @@ body {
 }
 
 #other-projects {
-  max-width: 400px;
+  min-width: 320px;
   width: 100%;
+  text-align: left;
   color: #0A0908;
   font-size: 1rem;
   font-weight: 200;
@@ -245,16 +253,16 @@ body {
 
 #other-projects .indent {
   display: block;
-  margin: auto;
-  width: 360px;
-  padding: 1rem 2rem;
+  width: 100%;
+  min-width: 320px;
+  padding: 1rem 1rem 1rem;
 }
 
 #other-projects .col-small {
   display: block;
-  margin: auto;
-  width: 360px;
-  padding: 1rem 2rem;
+  width: 100%;
+  min-width: 320px;
+  padding: 1rem 1rem 1rem;
   color: #5E503F;
   font-size: 1.2rem;
   font-weight: bold;
@@ -265,7 +273,7 @@ body {
   font-weight: 600;
   font-style: italic;
   color: #49111C;
-  margin-left: 2rem;
+  margin-left: 1rem;
   display: inline-block;
 }
 
@@ -284,5 +292,41 @@ body {
   border-radius: 8px;
   padding: 5px;
   margin: 2px;
+}
+
+#footer {
+  display: block;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  color: #0A0908;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+}
+
+#footer a {
+  color: #0A0908;
+}
+
+#footer .col-small {
+  display: block;
+}
+
+#footer .attribution {
+  display: block;
+  margin: 0 20px;
+}
+
+#footer .col-large {
+  display: inline-block;
+  width: 100%;
+}
+
+#footer .col-large img {
+  width: 30px;
+  margin: 8px;
 }
 /*# sourceMappingURL=main.css.map */

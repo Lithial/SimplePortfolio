@@ -3,22 +3,40 @@
 @import './breakpoints';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&display=swap');
 
+/*Used to make the surrounded text my stylized bold*/
 @mixin strong-description{
     font-weight: 600;
     font-style: italic;
     color: $primaryMiddle
 }
+/*Padding function for the default mobile padding*/
 @mixin mobile-padding(){
     display: block;
-    margin: auto;
-    width: 360px;
-    padding: 1rem 2rem;
+    width: 100%;
+    min-width: 320px;
+    padding: 1rem 1rem 1rem;
 }
+
+/* specific padding function*/
+@mixin common-padding-intro {
+    padding: 3rem 0 2rem;
+}
+/*Common font styles setup*/
 @mixin common-header {
     color: $secondaryDark;
     font-size: 1.2rem;
     font-weight: bold;
     font-style: italic;
+}
+@mixin common-descriptor-setup {
+    min-width: 320px;
+    width: 100%;
+    text-align:left;
+    color: $primaryDark;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+    padding: 1rem 2rem;
 }
 
 body{
@@ -42,10 +60,7 @@ body{
         padding: 2rem 6rem;
 
     }
-    @mixin common-padding-intro {
-        padding: 3rem 0 2rem;
-
-    }
+ 
     .greeting{
         @include common-padding-intro();
         display: inline-block;
@@ -60,6 +75,7 @@ body{
     }
     .description{
         @include common-padding-intro();
+
         strong{
             @include strong-description();
         }
@@ -81,20 +97,12 @@ body{
     }
 }
 
-@mixin common-descriptor-setup {
-    max-width: 400px;
-    width: 100%;
-    color: $primaryDark;
-    font-size: 1rem;
-    font-weight: 200;
-    line-height: 1.5rem;
-    padding: 1rem 2rem;
-}
+
 #about-me{
    @include common-descriptor-setup;
-    .col-small{
-
-        @include mobile-padding();
+   .col-small{
+       
+       @include mobile-padding();
         @include common-header();
     }
     .col-large{
@@ -161,10 +169,10 @@ body{
         @include common-header();
     }
     .col-large{
-        
+
         .title{
             @include strong-description();
-            margin-left: 2rem;
+            margin-left: 1rem;
             display: inline-block;
             a{
                 display: inline-block;
@@ -183,4 +191,37 @@ body{
         }
     }  
    
+}
+#footer{
+      
+    display: block;
+    text-align: center;
+    align-items: center; 
+    padding: 1rem;
+    color: $primaryDark;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+    a{
+        color:$primaryDark;
+    }
+
+    .col-small{
+        display: block;   
+   
+    }
+    .attribution{
+        display: block;  
+        margin: 0 20px;
+  
+    }
+    .col-large{
+        display: inline-block;
+        width: 100%;        
+        img{
+            width: 30px;
+            margin: 8px;
+        }
+    
+    }
 }
