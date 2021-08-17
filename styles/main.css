@@ -74,19 +74,32 @@ body {
   color: #0A0908;
 }
 
-@media all and (min-width: 641px) {
+@media all and (min-width: 1025px) {
   #introduction {
-    padding: 2rem 6rem;
+    background-color: blue;
   }
 }
 
 #introduction .greeting {
   padding: 3rem 0 2rem;
-  display: inline-block;
+  display: block;
+}
+
+@media all and (min-width: 641px) {
+  #introduction .greeting {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #introduction .greeting {
+    padding-bottom: 8rem;
+  }
 }
 
 #introduction .greeting img {
-  display: inline-block;
   margin-left: 32px;
   padding-left: 32px;
   width: 128px;
@@ -94,6 +107,20 @@ body {
 
 #introduction .description {
   padding: 3rem 0 2rem;
+}
+
+@media all and (min-width: 641px) {
+  #introduction .description {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #introduction .description {
+    padding-bottom: 8rem;
+  }
 }
 
 #introduction .description strong {
@@ -106,6 +133,14 @@ body {
   padding: 3rem 0 2rem;
   font-size: .8em;
   font-weight: 100;
+}
+
+@media all and (min-width: 641px) {
+  #introduction .contact {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 #introduction .contact a {
@@ -142,11 +177,27 @@ body {
   font-style: italic;
 }
 
+@media all and (min-width: 641px) {
+  #about-me .col-small {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+}
+
 #about-me .col-large {
   display: block;
   width: 100%;
   min-width: 320px;
   padding: 1rem 1rem 1rem;
+}
+
+@media all and (min-width: 641px) {
+  #about-me .col-large {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 #about-me .col-large p {
@@ -181,15 +232,41 @@ body {
   font-style: italic;
 }
 
+@media all and (min-width: 641px) {
+  #skills .col-small {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+}
+
 #skills .col-large {
   display: block;
   width: 100%;
   min-width: 320px;
   padding: 1rem 1rem 1rem;
+  width: 100%;
+}
+
+@media all and (min-width: 641px) {
+  #skills .col-large {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #skills .col-large {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 #skills .col-large .col-list {
   display: inline-block;
+  min-width: 23%;
   vertical-align: top;
   padding: 1rem 1rem;
 }
@@ -222,11 +299,27 @@ body {
   font-style: italic;
 }
 
+@media all and (min-width: 641px) {
+  #featured-projects .col-small {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+}
+
 #featured-projects .col-large {
   display: block;
   width: 100%;
   min-width: 320px;
   padding: 1rem 1rem 1rem;
+}
+
+@media all and (min-width: 641px) {
+  #featured-projects .col-large {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 #featured-projects .col-large strong {
@@ -251,13 +344,6 @@ body {
   padding: 1rem 2rem;
 }
 
-#other-projects .indent {
-  display: block;
-  width: 100%;
-  min-width: 320px;
-  padding: 1rem 1rem 1rem;
-}
-
 #other-projects .col-small {
   display: block;
   width: 100%;
@@ -269,11 +355,34 @@ body {
   font-style: italic;
 }
 
+@media all and (min-width: 641px) {
+  #other-projects .col-small {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+#other-projects .col-large {
+  display: block;
+  width: 100%;
+  min-width: 320px;
+  padding: 1rem 1rem 1rem;
+}
+
+@media all and (min-width: 641px) {
+  #other-projects .col-large {
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+  }
+}
+
 #other-projects .col-large .title {
+  padding: 10px 0;
   font-weight: 600;
   font-style: italic;
   color: #49111C;
-  margin-left: 1rem;
   display: inline-block;
 }
 
