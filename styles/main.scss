@@ -19,9 +19,8 @@
 @mixin large-header-responsive(){
     @include breakpoints(large){
         display: inline-block;
-        max-width: 45%;
+        max-width: 30%;
         min-width: 400px;
-        width: 350px;
         text-align: right;
         vertical-align:top;
         padding: 25px 0;
@@ -47,7 +46,7 @@
 @mixin mobile-padding(){
     display: block;
     width: 100%;
-    min-width: 320px;
+    min-width: 260px;
     padding: 1rem 1rem 1rem;
     @include medium-padding-function();
 
@@ -83,18 +82,25 @@
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: $primaryLight;
+
 }
 
 #introduction{
     /*dimensions*/
-    height: 100vh;
+    height: 100vh; 
     margin: auto;
-    padding: 2rem 3rem;
+    padding-bottom: 100px;
+    margin-bottom: 5rem;
+
     /*font*/
     font-size: 2em;
     font-weight: 200;
     line-height: 3rem;
     color: $primaryDark;
+    @include breakpoints(small){
+        padding: 1rem 2rem;
+        margin-bottom: 5rem;
+      }
     @include breakpoints(x-large){
         margin: 0 auto;
         max-width: 1400px;
@@ -131,16 +137,17 @@ body{
     }
     .contact{
         @include common-padding-intro();
-        font-size: .8em;
+        font-size: 1rem;
         font-weight: 100;
+        text-align: center;
         a{
             text-decoration: none;
             color: inherit;
             word-wrap: break-word;
         }
         img{
-            height: 35px;
-            width: 35px;
+            height: 30px;
+            width: 30px;
             vertical-align: middle;
         }
     }
