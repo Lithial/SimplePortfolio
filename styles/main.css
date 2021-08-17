@@ -339,7 +339,10 @@ body {
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  padding: 1rem 0;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5rem;
 }
 
 #about-me .col-large ul li {
@@ -501,7 +504,10 @@ body {
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  padding: 1rem 0;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5rem;
 }
 
 #skills .col-large ul li {
@@ -670,7 +676,10 @@ body {
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  padding: 1rem 0;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5rem;
 }
 
 #featured-projects .col-large ul li {
@@ -837,7 +846,10 @@ body {
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  padding: 1rem 0;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5rem;
 }
 
 #other-projects .col-large ul li {
@@ -893,8 +905,26 @@ body {
   display: inline-block;
 }
 
-#other-projects .col-large .title a {
+#other-projects .col-large .project a {
+  text-decoration: none;
   display: inline-block;
+}
+
+#other-projects .col-large .project a i {
+  width: 2rem;
+  font-style: 2rem;
+}
+
+#other-projects .col-large .fa {
+  padding-left: 0.5rem;
+  font-size: 1.2rem;
+  color: #C90020;
+}
+
+#other-projects .col-large .fa:hover {
+  color: #3D004D;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 #other-projects .col-large .technologies {
