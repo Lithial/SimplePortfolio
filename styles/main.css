@@ -59,7 +59,7 @@ Found: https://ian.pvdindustrial.com/blog/mobile-first-scss-media-queries-mixin-
 /*Common font styles setup*/
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #F2F4F3;
+  background-color: #FFFFFF;
 }
 
 #introduction {
@@ -71,7 +71,7 @@ body {
   font-size: 2em;
   font-weight: 200;
   line-height: 3rem;
-  color: #0A0908;
+  color: #000000;
 }
 
 @media all and (min-width: 1601px) {
@@ -139,7 +139,7 @@ body {
 #introduction .description strong {
   font-weight: 600;
   font-style: italic;
-  color: #49111C;
+  color: #C90020;
 }
 
 #introduction .contact {
@@ -172,7 +172,7 @@ body {
   min-width: 320px;
   width: 100%;
   text-align: left;
-  color: #0A0908;
+  color: #000000;
   font-size: 1rem;
   font-weight: 200;
   line-height: 1.5rem;
@@ -191,7 +191,7 @@ body {
   width: 100%;
   min-width: 320px;
   padding: 1rem 1rem 1rem;
-  color: #5E503F;
+  color: #3D004D;
   font-size: 1.2rem;
   font-weight: bold;
   font-style: italic;
@@ -249,14 +249,14 @@ body {
 #about-me .col-large strong {
   font-weight: 600;
   font-style: italic;
-  color: #49111C;
+  color: #C90020;
 }
 
 #skills {
   min-width: 320px;
   width: 100%;
   text-align: left;
-  color: #0A0908;
+  color: #000000;
   font-size: 1rem;
   font-weight: 200;
   line-height: 1.5rem;
@@ -275,7 +275,7 @@ body {
   width: 100%;
   min-width: 320px;
   padding: 1rem 1rem 1rem;
-  color: #5E503F;
+  color: #3D004D;
   font-size: 1.2rem;
   font-weight: bold;
   font-style: italic;
@@ -345,14 +345,14 @@ body {
 #skills .col-large .col-list strong {
   font-weight: 600;
   font-style: italic;
-  color: #49111C;
+  color: #C90020;
 }
 
 #featured-projects {
   min-width: 320px;
   width: 100%;
   text-align: left;
-  color: #0A0908;
+  color: #000000;
   font-size: 1rem;
   font-weight: 200;
   line-height: 1.5rem;
@@ -371,7 +371,7 @@ body {
   width: 100%;
   min-width: 320px;
   padding: 1rem 1rem 1rem;
-  color: #5E503F;
+  color: #3D004D;
   font-size: 1.2rem;
   font-weight: bold;
   font-style: italic;
@@ -425,7 +425,7 @@ body {
 #featured-projects .col-large strong {
   font-weight: 600;
   font-style: italic;
-  color: #49111C;
+  color: #C90020;
 }
 
 #featured-projects #atlas-laptop {
@@ -437,7 +437,7 @@ body {
   min-width: 320px;
   width: 100%;
   text-align: left;
-  color: #0A0908;
+  color: #000000;
   font-size: 1rem;
   font-weight: 200;
   line-height: 1.5rem;
@@ -457,7 +457,7 @@ body {
   width: 100%;
   min-width: 320px;
   padding: 1rem 1rem 1rem;
-  color: #5E503F;
+  color: #3D004D;
   font-size: 1.2rem;
   font-weight: bold;
   font-style: italic;
@@ -512,7 +512,7 @@ body {
   padding: 10px 0;
   font-weight: 600;
   font-style: italic;
-  color: #49111C;
+  color: #C90020;
   display: inline-block;
 }
 
@@ -530,8 +530,8 @@ body {
 
 #other-projects .col-large .technologies li {
   display: inline-block;
-  color: #49111C;
-  border: 1px solid #49111C;
+  color: #3D004D;
+  border: 1px solid #3D004D;
   border-radius: 8px;
   padding: 5px;
   margin: 2px;
@@ -544,14 +544,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
-  color: #0A0908;
+  color: #000000;
   font-size: 1rem;
   font-weight: 200;
   line-height: 1.5rem;
 }
 
 #footer a {
-  color: #0A0908;
+  color: #000000;
 }
 
 #footer .col-small {
