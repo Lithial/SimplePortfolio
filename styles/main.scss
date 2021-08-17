@@ -3,122 +3,282 @@
 @import './breakpoints';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&display=swap');
 
-@mixin medium-padding-function {
-    @include breakpoints(medium){
-        width: 80%;
-        min-width: 600px;
-        margin: 0 auto;
-    }
-}
+// @mixin medium-padding-function {
+//     @include breakpoints(medium){
+//         width: 80%;
+//         min-width: 600px;
+//         margin: 0 auto;
+//     }
+// }
 
-@mixin large-padding-function {
-    width: 60%;
-    min-width: 900px;
-    margin: 0 auto;
-}
-@mixin large-header-responsive(){
-    @include breakpoints(large){
-        display: inline-block;
-        max-width: 30%;
-        min-width: 400px;
-        text-align: right;
-        vertical-align:top;
-        padding: 25px 0;
-    }
-}
-@mixin large-text-responsive(){
-    @include breakpoints(large){
-        display: inline-block;
-        min-width: 400px;
-        max-width: 45%;
-        vertical-align:top;
-        width: 75%;
-    }
-}
+// @mixin large-padding-function {
+//     width: 60%;
+//     min-width: 900px;
+//     margin: 0 auto;
+// }
+// @mixin large-header-responsive(){
+//     @include breakpoints(large){
+//         display: inline-block;
+//         max-width: 30%;
+//         min-width: 400px;
+//         text-align: right;
+//         vertical-align:top;
+//         padding: 25px 0;
+//     }
+// }
+// @mixin large-text-responsive(){
+//     @include breakpoints(large){
+//         display: inline-block;
+//         min-width: 400px;
+//         max-width: 45%;
+//         vertical-align:top;
+//         width: 75%;
+//     }
+// }
 
-/*Used to make the surrounded text my stylized bold*/
-@mixin strong-description{
+// /*Padding function for the default mobile padding*/
+// @mixin mobile-padding(){
+//     display: block;
+//     width: 100%;
+//     min-width: 220px;
+//     padding: 1rem 0rem 1rem;
+//     @include medium-padding-function();
+
+// }
+
+
+// /* specific padding function*/
+// @mixin common-padding-intro {
+//     @include medium-padding-function();
+//     padding: 3rem 0 2rem;
+// }
+
+// @mixin common-descriptor-setup {
+//     min-width: 320px;
+//     width: 100%;
+//     text-align:left;
+//     padding: 1rem 2rem;
+
+// }
+
+/*Fonts*/
+/*Strong Tag */
+@mixin strong{
     font-weight: 600;
     font-style: italic;
     color: $primaryMiddle
 }
-/*Padding function for the default mobile padding*/
-@mixin mobile-padding(){
-    display: block;
-    width: 100%;
-    min-width: 220px;
-    padding: 1rem 0rem 1rem;
-    @include medium-padding-function();
 
+/*Call to Action Font Size*/
+@mixin main-header{
+    font-size: 1.4rem;
+    font-weight: 200;
+    line-height: 3rem;
+    color: $primaryDark;
+    strong {
+        @include strong();
+    }
+    @include breakpoints(medium){
+        font-size: 2rem;
+      }
 }
 
+/*Small Font - footers and such*/
+@mixin small-font(){
+    color: $primaryDark;
+    font-size: 0.9rem;
+    font-weight: 100;
+    line-height: 1.5rem;
 
-/* specific padding function*/
-@mixin common-padding-intro {
-    @include medium-padding-function();
-    // @include large-padding-function();
-    // //@include xlarge-padding-function();
-    padding: 3rem 0 2rem;
 }
-/*Common font styles setup*/
-@mixin common-header {
+/*Standard Font*/
+@mixin standard-font(){
+    color: $primaryDark;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+}
+/*Standard Font*/
+@mixin feature-font(){
+    color: $primaryMiddle;
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+}
+
+/*Strong Heading for the left hand column titles*/
+@mixin strong-header {
     color: $secondaryDark;
     font-size: 1.2rem;
     font-weight: bold;
     font-style: italic;
 }
-@mixin common-descriptor-setup {
-    min-width: 320px;
-    width: 100%;
-    text-align:left;
-    color: $primaryDark;
-    font-size: 1rem;
-    font-weight: 200;
-    line-height: 1.5rem;
-    padding: 1rem 2rem;
 
+
+/* Margin and Padding*/
+@mixin base(){
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    p{
+        padding: 1.5rem 0;
+    }
+   
+}
+@mixin intro-panel-padding {
+    @include breakpoints(small){
+        padding: 3rem 2rem;
+        p{
+            padding: 4rem 0 1rem;
+        }
+    }
+    @include breakpoints(medium){
+        padding: 6rem 4rem;
+        max-width: 85%;
+        p{
+            padding: 4rem 0 2rem;
+        }
+    }
+    @include breakpoints(large){
+        padding: 6rem 6rem;
+        max-width: 70%;
+        p{
+            padding: 4rem 0 3rem;
+        }
+    }
+    @include breakpoints(x-large){
+        padding: 6rem 8rem;
+        max-width: 60%;
+        p{
+            padding: 4rem 0 4rem;
+        }
+    }
+}
+@mixin two-column-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    @include breakpoints(small){
+        padding: 3rem 2rem;
+        p{
+            padding: 0 0 1rem;
+        }
+    }
+    @include breakpoints(medium){
+        padding: 3rem 2rem;
+        max-width: 85%;
+        p{
+            padding: 0 0 2rem;
+        }
+    }
+    @include breakpoints(large){
+        padding: 3rem 3rem;
+        flex-direction: row;
+        max-width: 70%;
+        p{
+            padding: 0 0 2rem;
+        }
+    }
+    @include breakpoints(x-large){
+        padding: 3rem 4rem;
+        flex-direction: row;
+        max-width: 60%;
+        p{
+            padding: 0rem 0 2rem;
+        }
+    }
 }
 
+@mixin title-column($alignment){
+    
+    @include breakpoints(small){
+        text-align: $alignment;
+
+    }
+    @include breakpoints(large){
+        text-align: left;
+        min-width: 250px;
+        max-width: 250px;
+
+    }
+    @include breakpoints(x-large){
+        text-align: left;
+    }
+}
+
+@mixin content-column{
+    max-width: 1000px;
+
+    p{
+        @include standard-font();
+        strong{
+            @include strong();
+        }
+    }
+    ul{
+        min-width: 175px; 
+        max-width: 400px; 
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 1rem 0;
+        li{
+            padding: 0.3rem;
+        }
+        strong{
+            @include strong();
+        }
+      
+    }
+    img{
+        max-width: 512px;
+    }
+    @include breakpoints(small){
+        ul{
+            min-width: 200px; 
+            max-width: 600px; 
+            margin: 0 auto;
+            text-align: center;
+
+        }
+    }
+    @include breakpoints(medium){
+        ul{
+            text-align: center;
+            min-width: 150px; 
+            max-width: 150px; 
+        }
+    }
+    @include breakpoints(large){
+        ul{
+            text-align: left;
+            min-width: 175px; 
+            max-width: 175px; 
+        }
+    }
+    @include breakpoints(x-large){
+        text-align: left;
+
+    }
+}
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: $primaryLight;
-
+    display: flex;
+    flex-direction: column;
 }
+
 
 #introduction{
     /*dimensions*/
     min-height: 800px; 
     height: 100vh;
-    margin: auto;
-    padding-bottom: 100px;
+    @include base();
+    @include intro-panel-padding();
 
-    /*font*/
-    font-size: 1.4rem;
-    font-weight: 200;
-    line-height: 3rem;
-    color: $primaryDark;
-    @include breakpoints(small){
-        padding: 1rem 2rem;
-        margin-bottom: 5rem;
-      }
-      @include breakpoints(medium){
-        font-size: 2rem;
-      }
-    @include breakpoints(x-large){
-        margin: 0 auto;
-        max-width: 1400px;
-      }
     .greeting{
-        @include common-padding-intro();
-        display: block;
-        @include breakpoints(medium){
-            padding-bottom: 8rem;
-        }
-        @include breakpoints(large){
-            padding-bottom: 10rem;
-        }
+        @include main-header();
         img{
-            // display: inline-block;
             margin-left:  32px;
             padding-left: 32px;
             width: 128px;
@@ -126,111 +286,79 @@ body{
        
     }
     .description{
-        @include common-padding-intro();
-        @include breakpoints(medium){
-            padding-bottom: 8rem;
-        }
-        @include breakpoints(large){
-            padding-bottom: 10rem;
-
-        }
-        strong{
-            @include strong-description();
-        }
+        @include main-header();
     }
     .contact{
-        @include common-padding-intro();
-        font-size: 1rem;
-        font-weight: 100;
+        @include main-header();
         text-align: center;
         a{
-            text-decoration: none;
+            text-decoration: underline;
+            text-decoration-color: $primaryMiddle;
             color: inherit;
             word-wrap: break-word;
+            &:hover{
+                color: $primaryLight;
+                background-color: $primaryMiddle;
+                border-radius: 5px;
+                transition: all 0.3s;
+            }
         }
         img{
-            height: 20px;
-            width: 20px;
+            height: 2rem;
+            width: 2rem;
             vertical-align: middle;
         }
     }
 }
 
-
-#about-me{
-   @include common-descriptor-setup;
-   @include breakpoints(x-large){
+#center-me{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     margin: 0 auto;
-    max-width: 1400px;
-  }
+    align-items: center;
+}
+#about-me{
+
+    @include base();
+    @include two-column-panel();
+  
    .col-small{
-       
-       @include mobile-padding();
-        @include common-header();
-        @include large-header-responsive();
+       @include strong-header();
+       @include title-column(left);
     }
     .col-large{
-        @include mobile-padding();
-        @include large-text-responsive();
-        p{
-            padding-bottom: 1rem;
-        }
-        strong{
-            @include strong-description();
-        }
+        @include content-column();
+      
     }
 }
 
 #skills{
-    @include common-descriptor-setup;
-    @include breakpoints(x-large){
-        margin: 0 auto;
-        max-width: 1400px;
-      }
+    @include base();
+    @include two-column-panel();
     .col-small{
-
-        @include mobile-padding();
-        @include common-header();
-        @include large-header-responsive();
+        @include strong-header();
+        @include title-column(center);
     }
     .col-large{
-        @include mobile-padding();
-        @include medium-padding-function();
-        @include large-text-responsive();
-        width: 100%;
-        
-        .col-list{
-            
-            display: inline-block;
-            min-width: 23%; 
-            vertical-align: top;
-            padding: 1rem 1rem;
-            strong{
-                @include strong-description();
-            }
-        
-        }
+        @include content-column();
     }
 }
 
 #featured-projects{
-    @include common-descriptor-setup;
-    @include breakpoints(x-large){
-        margin: 0 auto;
-        max-width: 1400px;
-      } 
+    @include base();
+    @include two-column-panel();
     .col-small{
-        @include mobile-padding();
-        @include common-header();
-        @include large-header-responsive();
+        @include strong-header();
+        @include title-column(left);
     }
     .col-large{
-        @include mobile-padding();
-        @include large-text-responsive();
-        strong{
-            @include strong-description();
+        .featured{
+            @include feature-font();
         }
+        @include content-column();
     }
+  
     #atlas-laptop{
         display: inline-block;
         width: 100%; 
@@ -239,73 +367,68 @@ body{
 }
 
 #other-projects{
-    @include common-descriptor-setup;
-    @include breakpoints(x-large){
-        margin: 0 auto;
-        max-width: 1400px;
-      }
-    margin: 0 auto;
+    @include base();
+    @include two-column-panel();
     .col-small{
-        @include mobile-padding();
-        @include common-header();
-        @include large-header-responsive();
+        @include strong-header();
+        @include title-column(left);
     }
     .col-large{
-        @include mobile-padding();
-        // width: 100%;
-        @include large-text-responsive();
+        @include content-column();
         .title{
-            // max-width: 30%;
-            padding: 10px 0;
-            @include strong-description();
-            // margin-left: 1rem;
+            @include strong();
+            padding: 1rem 0;
             display: inline-block;
-        
             a{
                 display: inline-block;
             }
             
         }
-        .description{
-            display: inline-block;
-    
-        }
         .technologies{
-            display: block;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        
+            @include breakpoints(medium){
+                flex-wrap:unset;
+            }
             li{
-                display: inline-block;
+                white-space: nowrap;
                 color: $secondaryDark;
                 border: 1px solid $secondaryDark;
                 border-radius: 8px;
-                padding: 5px;
-                margin: 2px;
+                margin: 0.1rem;
             }
         }
     }  
    
 }
 #footer{
-      
-    display: block;
+     
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center; 
     padding: 1rem;
-    color: $primaryDark;
-    font-size: 1rem;
-    font-weight: 200;
-    line-height: 1.5rem;
+    margin: 0 auto;
+    width: 70%;
+    @include small-font();
+    @include breakpoints(medium){
+            flex-direction: row;
+    }
     a{
         color:$primaryDark;
     }
 
     .col-small{
-        display: block;   
-   
+        width: 100%;
     }
     .attribution{
-        display: block;  
+        width: 100%;
+
         margin: 0 20px;
-  
     }
     .col-large{
         display: inline-block;

@@ -53,70 +53,93 @@ input {
 /*
 Found: https://ian.pvdindustrial.com/blog/mobile-first-scss-media-queries-mixin-20181115/
 */
-/*Used to make the surrounded text my stylized bold*/
-/*Padding function for the default mobile padding*/
-/* specific padding function*/
-/*Common font styles setup*/
+/*Fonts*/
+/*Strong Tag */
+/*Call to Action Font Size*/
+/*Small Font - footers and such*/
+/*Standard Font*/
+/*Standard Font*/
+/*Strong Heading for the left hand column titles*/
+/* Margin and Padding*/
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #introduction {
   /*dimensions*/
   min-height: 800px;
   height: 100vh;
-  margin: auto;
-  padding-bottom: 100px;
-  /*font*/
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+#introduction p {
+  padding: 1.5rem 0;
+}
+
+@media all and (min-width: 321px) {
+  #introduction {
+    padding: 3rem 2rem;
+  }
+  #introduction p {
+    padding: 4rem 0 1rem;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #introduction {
+    padding: 6rem 4rem;
+    max-width: 85%;
+  }
+  #introduction p {
+    padding: 4rem 0 2rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #introduction {
+    padding: 6rem 6rem;
+    max-width: 70%;
+  }
+  #introduction p {
+    padding: 4rem 0 3rem;
+  }
+}
+
+@media all and (min-width: 1601px) {
+  #introduction {
+    padding: 6rem 8rem;
+    max-width: 60%;
+  }
+  #introduction p {
+    padding: 4rem 0 4rem;
+  }
+}
+
+#introduction .greeting {
   font-size: 1.4rem;
   font-weight: 200;
   line-height: 3rem;
   color: #000000;
 }
 
-@media all and (min-width: 321px) {
-  #introduction {
-    padding: 1rem 2rem;
-    margin-bottom: 5rem;
-  }
+#introduction .greeting strong {
+  font-weight: 600;
+  font-style: italic;
+  color: #C90020;
 }
 
 @media all and (min-width: 641px) {
-  #introduction {
+  #introduction .greeting {
     font-size: 2rem;
-  }
-}
-
-@media all and (min-width: 1601px) {
-  #introduction {
-    margin: 0 auto;
-    max-width: 1400px;
-  }
-}
-
-#introduction .greeting {
-  padding: 3rem 0 2rem;
-  display: block;
-}
-
-@media all and (min-width: 641px) {
-  #introduction .greeting {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
-  }
-}
-
-@media all and (min-width: 641px) {
-  #introduction .greeting {
-    padding-bottom: 8rem;
-  }
-}
-
-@media all and (min-width: 1025px) {
-  #introduction .greeting {
-    padding-bottom: 10rem;
   }
 }
 
@@ -127,27 +150,10 @@ body {
 }
 
 #introduction .description {
-  padding: 3rem 0 2rem;
-}
-
-@media all and (min-width: 641px) {
-  #introduction .description {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
-  }
-}
-
-@media all and (min-width: 641px) {
-  #introduction .description {
-    padding-bottom: 8rem;
-  }
-}
-
-@media all and (min-width: 1025px) {
-  #introduction .description {
-    padding-bottom: 10rem;
-  }
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 3rem;
+  color: #000000;
 }
 
 #introduction .description strong {
@@ -156,288 +162,560 @@ body {
   color: #C90020;
 }
 
+@media all and (min-width: 641px) {
+  #introduction .description {
+    font-size: 2rem;
+  }
+}
+
 #introduction .contact {
-  padding: 3rem 0 2rem;
-  font-size: 1rem;
-  font-weight: 100;
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 3rem;
+  color: #000000;
   text-align: center;
+}
+
+#introduction .contact strong {
+  font-weight: 600;
+  font-style: italic;
+  color: #C90020;
 }
 
 @media all and (min-width: 641px) {
   #introduction .contact {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
+    font-size: 2rem;
   }
 }
 
 #introduction .contact a {
-  text-decoration: none;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #C90020;
+          text-decoration-color: #C90020;
   color: inherit;
   word-wrap: break-word;
 }
 
+#introduction .contact a:hover {
+  color: #FFFFFF;
+  background-color: #C90020;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 #introduction .contact img {
-  height: 20px;
-  width: 20px;
+  height: 2rem;
+  width: 2rem;
   vertical-align: middle;
 }
 
-#about-me {
-  min-width: 320px;
+#center-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  text-align: left;
-  color: #000000;
-  font-size: 1rem;
-  font-weight: 200;
-  line-height: 1.5rem;
-  padding: 1rem 2rem;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-me {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2rem;
+}
+
+#about-me p {
+  padding: 1.5rem 0;
+}
+
+@media all and (min-width: 321px) {
+  #about-me {
+    padding: 3rem 2rem;
+  }
+  #about-me p {
+    padding: 0 0 1rem;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #about-me {
+    padding: 3rem 2rem;
+    max-width: 85%;
+  }
+  #about-me p {
+    padding: 0 0 2rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #about-me {
+    padding: 3rem 3rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 70%;
+  }
+  #about-me p {
+    padding: 0 0 2rem;
+  }
 }
 
 @media all and (min-width: 1601px) {
   #about-me {
-    margin: 0 auto;
-    max-width: 1400px;
+    padding: 3rem 4rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 60%;
+  }
+  #about-me p {
+    padding: 0rem 0 2rem;
   }
 }
 
 #about-me .col-small {
-  display: block;
-  width: 100%;
-  min-width: 220px;
-  padding: 1rem 0rem 1rem;
   color: #3D004D;
   font-size: 1.2rem;
   font-weight: bold;
   font-style: italic;
 }
 
-@media all and (min-width: 641px) {
+@media all and (min-width: 321px) {
   #about-me .col-small {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
+    text-align: left;
   }
 }
 
 @media all and (min-width: 1025px) {
   #about-me .col-small {
-    display: inline-block;
-    max-width: 30%;
-    min-width: 400px;
-    text-align: right;
-    vertical-align: top;
-    padding: 25px 0;
+    text-align: left;
+    min-width: 250px;
+    max-width: 250px;
+  }
+}
+
+@media all and (min-width: 1601px) {
+  #about-me .col-small {
+    text-align: left;
   }
 }
 
 #about-me .col-large {
-  display: block;
-  width: 100%;
-  min-width: 220px;
-  padding: 1rem 0rem 1rem;
-}
-
-@media all and (min-width: 641px) {
-  #about-me .col-large {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
-  }
-}
-
-@media all and (min-width: 1025px) {
-  #about-me .col-large {
-    display: inline-block;
-    min-width: 400px;
-    max-width: 45%;
-    vertical-align: top;
-    width: 75%;
-  }
+  max-width: 1000px;
 }
 
 #about-me .col-large p {
-  padding-bottom: 1rem;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5rem;
 }
 
-#about-me .col-large strong {
+#about-me .col-large p strong {
   font-weight: 600;
   font-style: italic;
   color: #C90020;
 }
 
-#skills {
-  min-width: 320px;
+#about-me .col-large ul {
+  min-width: 175px;
+  max-width: 400px;
   width: 100%;
-  text-align: left;
-  color: #000000;
-  font-size: 1rem;
-  font-weight: 200;
-  line-height: 1.5rem;
-  padding: 1rem 2rem;
+  display: inline-block;
+  vertical-align: top;
+  padding: 1rem 0;
+}
+
+#about-me .col-large ul li {
+  padding: 0.3rem;
+}
+
+#about-me .col-large ul strong {
+  font-weight: 600;
+  font-style: italic;
+  color: #C90020;
+}
+
+#about-me .col-large img {
+  max-width: 512px;
+}
+
+@media all and (min-width: 321px) {
+  #about-me .col-large ul {
+    min-width: 200px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #about-me .col-large ul {
+    text-align: center;
+    min-width: 150px;
+    max-width: 150px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #about-me .col-large ul {
+    text-align: left;
+    min-width: 175px;
+    max-width: 175px;
+  }
+}
+
+@media all and (min-width: 1601px) {
+  #about-me .col-large {
+    text-align: left;
+  }
+}
+
+#skills {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2rem;
+}
+
+#skills p {
+  padding: 1.5rem 0;
+}
+
+@media all and (min-width: 321px) {
+  #skills {
+    padding: 3rem 2rem;
+  }
+  #skills p {
+    padding: 0 0 1rem;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #skills {
+    padding: 3rem 2rem;
+    max-width: 85%;
+  }
+  #skills p {
+    padding: 0 0 2rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #skills {
+    padding: 3rem 3rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 70%;
+  }
+  #skills p {
+    padding: 0 0 2rem;
+  }
 }
 
 @media all and (min-width: 1601px) {
   #skills {
-    margin: 0 auto;
-    max-width: 1400px;
+    padding: 3rem 4rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 60%;
+  }
+  #skills p {
+    padding: 0rem 0 2rem;
   }
 }
 
 #skills .col-small {
-  display: block;
-  width: 100%;
-  min-width: 220px;
-  padding: 1rem 0rem 1rem;
   color: #3D004D;
   font-size: 1.2rem;
   font-weight: bold;
   font-style: italic;
 }
 
-@media all and (min-width: 641px) {
+@media all and (min-width: 321px) {
   #skills .col-small {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
+    text-align: center;
   }
 }
 
 @media all and (min-width: 1025px) {
   #skills .col-small {
-    display: inline-block;
-    max-width: 30%;
-    min-width: 400px;
-    text-align: right;
-    vertical-align: top;
-    padding: 25px 0;
+    text-align: left;
+    min-width: 250px;
+    max-width: 250px;
+  }
+}
+
+@media all and (min-width: 1601px) {
+  #skills .col-small {
+    text-align: left;
   }
 }
 
 #skills .col-large {
-  display: block;
-  width: 100%;
-  min-width: 220px;
-  padding: 1rem 0rem 1rem;
-  width: 100%;
+  max-width: 1000px;
 }
 
-@media all and (min-width: 641px) {
-  #skills .col-large {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
-  }
+#skills .col-large p {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5rem;
 }
 
-@media all and (min-width: 641px) {
-  #skills .col-large {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
-  }
-}
-
-@media all and (min-width: 1025px) {
-  #skills .col-large {
-    display: inline-block;
-    min-width: 400px;
-    max-width: 45%;
-    vertical-align: top;
-    width: 75%;
-  }
-}
-
-#skills .col-large .col-list {
-  display: inline-block;
-  min-width: 23%;
-  vertical-align: top;
-  padding: 1rem 1rem;
-}
-
-#skills .col-large .col-list strong {
+#skills .col-large p strong {
   font-weight: 600;
   font-style: italic;
   color: #C90020;
 }
 
-#featured-projects {
-  min-width: 320px;
+#skills .col-large ul {
+  min-width: 175px;
+  max-width: 400px;
   width: 100%;
-  text-align: left;
-  color: #000000;
-  font-size: 1rem;
-  font-weight: 200;
-  line-height: 1.5rem;
-  padding: 1rem 2rem;
+  display: inline-block;
+  vertical-align: top;
+  padding: 1rem 0;
+}
+
+#skills .col-large ul li {
+  padding: 0.3rem;
+}
+
+#skills .col-large ul strong {
+  font-weight: 600;
+  font-style: italic;
+  color: #C90020;
+}
+
+#skills .col-large img {
+  max-width: 512px;
+}
+
+@media all and (min-width: 321px) {
+  #skills .col-large ul {
+    min-width: 200px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #skills .col-large ul {
+    text-align: center;
+    min-width: 150px;
+    max-width: 150px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #skills .col-large ul {
+    text-align: left;
+    min-width: 175px;
+    max-width: 175px;
+  }
+}
+
+@media all and (min-width: 1601px) {
+  #skills .col-large {
+    text-align: left;
+  }
+}
+
+#featured-projects {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2rem;
+}
+
+#featured-projects p {
+  padding: 1.5rem 0;
+}
+
+@media all and (min-width: 321px) {
+  #featured-projects {
+    padding: 3rem 2rem;
+  }
+  #featured-projects p {
+    padding: 0 0 1rem;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #featured-projects {
+    padding: 3rem 2rem;
+    max-width: 85%;
+  }
+  #featured-projects p {
+    padding: 0 0 2rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #featured-projects {
+    padding: 3rem 3rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 70%;
+  }
+  #featured-projects p {
+    padding: 0 0 2rem;
+  }
 }
 
 @media all and (min-width: 1601px) {
   #featured-projects {
-    margin: 0 auto;
-    max-width: 1400px;
+    padding: 3rem 4rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 60%;
+  }
+  #featured-projects p {
+    padding: 0rem 0 2rem;
   }
 }
 
 #featured-projects .col-small {
-  display: block;
-  width: 100%;
-  min-width: 220px;
-  padding: 1rem 0rem 1rem;
   color: #3D004D;
   font-size: 1.2rem;
   font-weight: bold;
   font-style: italic;
 }
 
-@media all and (min-width: 641px) {
+@media all and (min-width: 321px) {
   #featured-projects .col-small {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
+    text-align: left;
   }
 }
 
 @media all and (min-width: 1025px) {
   #featured-projects .col-small {
-    display: inline-block;
-    max-width: 30%;
-    min-width: 400px;
-    text-align: right;
-    vertical-align: top;
-    padding: 25px 0;
+    text-align: left;
+    min-width: 250px;
+    max-width: 250px;
+  }
+}
+
+@media all and (min-width: 1601px) {
+  #featured-projects .col-small {
+    text-align: left;
   }
 }
 
 #featured-projects .col-large {
-  display: block;
+  max-width: 1000px;
+}
+
+#featured-projects .col-large .featured {
+  color: #C90020;
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+}
+
+#featured-projects .col-large p {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+}
+
+#featured-projects .col-large p strong {
+  font-weight: 600;
+  font-style: italic;
+  color: #C90020;
+}
+
+#featured-projects .col-large ul {
+  min-width: 175px;
+  max-width: 400px;
   width: 100%;
-  min-width: 220px;
-  padding: 1rem 0rem 1rem;
+  display: inline-block;
+  vertical-align: top;
+  padding: 1rem 0;
+}
+
+#featured-projects .col-large ul li {
+  padding: 0.3rem;
+}
+
+#featured-projects .col-large ul strong {
+  font-weight: 600;
+  font-style: italic;
+  color: #C90020;
+}
+
+#featured-projects .col-large img {
+  max-width: 512px;
+}
+
+@media all and (min-width: 321px) {
+  #featured-projects .col-large ul {
+    min-width: 200px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 @media all and (min-width: 641px) {
-  #featured-projects .col-large {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
+  #featured-projects .col-large ul {
+    text-align: center;
+    min-width: 150px;
+    max-width: 150px;
   }
 }
 
 @media all and (min-width: 1025px) {
-  #featured-projects .col-large {
-    display: inline-block;
-    min-width: 400px;
-    max-width: 45%;
-    vertical-align: top;
-    width: 75%;
+  #featured-projects .col-large ul {
+    text-align: left;
+    min-width: 175px;
+    max-width: 175px;
   }
 }
 
-#featured-projects .col-large strong {
-  font-weight: 600;
-  font-style: italic;
-  color: #C90020;
+@media all and (min-width: 1601px) {
+  #featured-projects .col-large {
+    text-align: left;
+  }
 }
 
 #featured-projects #atlas-laptop {
@@ -446,84 +724,172 @@ body {
 }
 
 #other-projects {
-  min-width: 320px;
-  width: 100%;
-  text-align: left;
-  color: #000000;
-  font-size: 1rem;
-  font-weight: 200;
-  line-height: 1.5rem;
-  padding: 1rem 2rem;
   margin: 0 auto;
+  padding: 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2rem;
+}
+
+#other-projects p {
+  padding: 1.5rem 0;
+}
+
+@media all and (min-width: 321px) {
+  #other-projects {
+    padding: 3rem 2rem;
+  }
+  #other-projects p {
+    padding: 0 0 1rem;
+  }
+}
+
+@media all and (min-width: 641px) {
+  #other-projects {
+    padding: 3rem 2rem;
+    max-width: 85%;
+  }
+  #other-projects p {
+    padding: 0 0 2rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #other-projects {
+    padding: 3rem 3rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 70%;
+  }
+  #other-projects p {
+    padding: 0 0 2rem;
+  }
 }
 
 @media all and (min-width: 1601px) {
   #other-projects {
-    margin: 0 auto;
-    max-width: 1400px;
+    padding: 3rem 4rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 60%;
+  }
+  #other-projects p {
+    padding: 0rem 0 2rem;
   }
 }
 
 #other-projects .col-small {
-  display: block;
-  width: 100%;
-  min-width: 220px;
-  padding: 1rem 0rem 1rem;
   color: #3D004D;
   font-size: 1.2rem;
   font-weight: bold;
   font-style: italic;
 }
 
-@media all and (min-width: 641px) {
+@media all and (min-width: 321px) {
   #other-projects .col-small {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
+    text-align: left;
   }
 }
 
 @media all and (min-width: 1025px) {
   #other-projects .col-small {
-    display: inline-block;
-    max-width: 30%;
-    min-width: 400px;
-    text-align: right;
-    vertical-align: top;
-    padding: 25px 0;
+    text-align: left;
+    min-width: 250px;
+    max-width: 250px;
+  }
+}
+
+@media all and (min-width: 1601px) {
+  #other-projects .col-small {
+    text-align: left;
   }
 }
 
 #other-projects .col-large {
-  display: block;
+  max-width: 1000px;
+}
+
+#other-projects .col-large p {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+}
+
+#other-projects .col-large p strong {
+  font-weight: 600;
+  font-style: italic;
+  color: #C90020;
+}
+
+#other-projects .col-large ul {
+  min-width: 175px;
+  max-width: 400px;
   width: 100%;
-  min-width: 220px;
-  padding: 1rem 0rem 1rem;
+  display: inline-block;
+  vertical-align: top;
+  padding: 1rem 0;
+}
+
+#other-projects .col-large ul li {
+  padding: 0.3rem;
+}
+
+#other-projects .col-large ul strong {
+  font-weight: 600;
+  font-style: italic;
+  color: #C90020;
+}
+
+#other-projects .col-large img {
+  max-width: 512px;
+}
+
+@media all and (min-width: 321px) {
+  #other-projects .col-large ul {
+    min-width: 200px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 @media all and (min-width: 641px) {
-  #other-projects .col-large {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
+  #other-projects .col-large ul {
+    text-align: center;
+    min-width: 150px;
+    max-width: 150px;
   }
 }
 
 @media all and (min-width: 1025px) {
+  #other-projects .col-large ul {
+    text-align: left;
+    min-width: 175px;
+    max-width: 175px;
+  }
+}
+
+@media all and (min-width: 1601px) {
   #other-projects .col-large {
-    display: inline-block;
-    min-width: 400px;
-    max-width: 45%;
-    vertical-align: top;
-    width: 75%;
+    text-align: left;
   }
 }
 
 #other-projects .col-large .title {
-  padding: 10px 0;
   font-weight: 600;
   font-style: italic;
   color: #C90020;
+  padding: 1rem 0;
   display: inline-block;
 }
 
@@ -531,34 +897,63 @@ body {
   display: inline-block;
 }
 
-#other-projects .col-large .description {
-  display: inline-block;
+#other-projects .col-large .technologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
-#other-projects .col-large .technologies {
-  display: block;
+@media all and (min-width: 641px) {
+  #other-projects .col-large .technologies {
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+  }
 }
 
 #other-projects .col-large .technologies li {
-  display: inline-block;
+  white-space: nowrap;
   color: #3D004D;
   border: 1px solid #3D004D;
   border-radius: 8px;
-  padding: 5px;
-  margin: 2px;
+  margin: 0.1rem;
 }
 
 #footer {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
+  margin: 0 auto;
+  width: 70%;
   color: #000000;
-  font-size: 1rem;
-  font-weight: 200;
+  font-size: 0.9rem;
+  font-weight: 100;
   line-height: 1.5rem;
+}
+
+@media all and (min-width: 641px) {
+  #footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 #footer a {
@@ -566,11 +961,11 @@ body {
 }
 
 #footer .col-small {
-  display: block;
+  width: 100%;
 }
 
 #footer .attribution {
-  display: block;
+  width: 100%;
   margin: 0 20px;
 }
 
