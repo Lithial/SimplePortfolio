@@ -8,9 +8,35 @@
         width: 80%;
         min-width: 600px;
         margin: 0 auto;
-
     }
 }
+
+@mixin large-padding-function {
+    width: 60%;
+    min-width: 900px;
+    margin: 0 auto;
+}
+@mixin large-header-responsive(){
+    @include breakpoints(large){
+        display: inline-block;
+        max-width: 45%;
+        min-width: 400px;
+        width: 350px;
+        text-align: right;
+        vertical-align:top;
+        padding: 25px 0;
+    }
+}
+@mixin large-text-responsive(){
+    @include breakpoints(large){
+        display: inline-block;
+        min-width: 400px;
+        max-width: 45%;
+        vertical-align:top;
+        width: 75%;
+    }
+}
+
 /*Used to make the surrounded text my stylized bold*/
 @mixin strong-description{
     font-weight: 600;
@@ -24,13 +50,15 @@
     min-width: 320px;
     padding: 1rem 1rem 1rem;
     @include medium-padding-function();
- 
+
 }
 
 
 /* specific padding function*/
 @mixin common-padding-intro {
     @include medium-padding-function();
+    // @include large-padding-function();
+    // //@include xlarge-padding-function();
     padding: 3rem 0 2rem;
 }
 /*Common font styles setup*/
@@ -67,22 +95,18 @@ body{
     font-weight: 200;
     line-height: 3rem;
     color: $primaryDark;
-    
-
-    // @include breakpoints(medium){
-    //     padding: 4rem 2rem;
-    //     margin: auto;
-
-    // }
-    @include breakpoints(large){
-        background-color: blue;
-
-    }
+    @include breakpoints(x-large){
+        margin: 0 auto;
+        max-width: 1400px;
+      }
     .greeting{
         @include common-padding-intro();
         display: block;
         @include breakpoints(medium){
             padding-bottom: 8rem;
+        }
+        @include breakpoints(large){
+            padding-bottom: 10rem;
         }
         img{
             // display: inline-block;
@@ -96,6 +120,10 @@ body{
         @include common-padding-intro();
         @include breakpoints(medium){
             padding-bottom: 8rem;
+        }
+        @include breakpoints(large){
+            padding-bottom: 10rem;
+
         }
         strong{
             @include strong-description();
@@ -121,13 +149,19 @@ body{
 
 #about-me{
    @include common-descriptor-setup;
+   @include breakpoints(x-large){
+    margin: 0 auto;
+    max-width: 1400px;
+  }
    .col-small{
        
        @include mobile-padding();
         @include common-header();
+        @include large-header-responsive();
     }
     .col-large{
         @include mobile-padding();
+        @include large-text-responsive();
         p{
             padding-bottom: 1rem;
         }
@@ -139,16 +173,20 @@ body{
 
 #skills{
     @include common-descriptor-setup;
-
+    @include breakpoints(x-large){
+        margin: 0 auto;
+        max-width: 1400px;
+      }
     .col-small{
 
         @include mobile-padding();
         @include common-header();
-        
+        @include large-header-responsive();
     }
     .col-large{
         @include mobile-padding();
         @include medium-padding-function();
+        @include large-text-responsive();
         width: 100%;
         
         .col-list{
@@ -167,45 +205,60 @@ body{
 
 #featured-projects{
     @include common-descriptor-setup;
-
+    @include breakpoints(x-large){
+        margin: 0 auto;
+        max-width: 1400px;
+      } 
     .col-small{
         @include mobile-padding();
         @include common-header();
-        
+        @include large-header-responsive();
     }
     .col-large{
         @include mobile-padding();
+        @include large-text-responsive();
         strong{
             @include strong-description();
         }
     }
     #atlas-laptop{
         display: inline-block;
-        width: 100%;
+        width: 100%; 
     }
 
 }
 
 #other-projects{
     @include common-descriptor-setup;
-    .indent{
-        // @include mobile-padding();
-    }  
+    @include breakpoints(x-large){
+        margin: 0 auto;
+        max-width: 1400px;
+      }
+    margin: 0 auto;
     .col-small{
         @include mobile-padding();
         @include common-header();
+        @include large-header-responsive();
     }
     .col-large{
         @include mobile-padding();
+        // width: 100%;
+        @include large-text-responsive();
         .title{
+            // max-width: 30%;
             padding: 10px 0;
             @include strong-description();
             // margin-left: 1rem;
             display: inline-block;
+        
             a{
                 display: inline-block;
             }
             
+        }
+        .description{
+            display: inline-block;
+    
         }
         .technologies{
             display: block;

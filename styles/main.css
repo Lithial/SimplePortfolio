@@ -74,9 +74,10 @@ body {
   color: #0A0908;
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 1601px) {
   #introduction {
-    background-color: blue;
+    margin: 0 auto;
+    max-width: 1400px;
   }
 }
 
@@ -96,6 +97,12 @@ body {
 @media all and (min-width: 641px) {
   #introduction .greeting {
     padding-bottom: 8rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #introduction .greeting {
+    padding-bottom: 10rem;
   }
 }
 
@@ -120,6 +127,12 @@ body {
 @media all and (min-width: 641px) {
   #introduction .description {
     padding-bottom: 8rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #introduction .description {
+    padding-bottom: 10rem;
   }
 }
 
@@ -166,6 +179,13 @@ body {
   padding: 1rem 2rem;
 }
 
+@media all and (min-width: 1601px) {
+  #about-me {
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+}
+
 #about-me .col-small {
   display: block;
   width: 100%;
@@ -185,6 +205,18 @@ body {
   }
 }
 
+@media all and (min-width: 1025px) {
+  #about-me .col-small {
+    display: inline-block;
+    max-width: 45%;
+    min-width: 400px;
+    width: 350px;
+    text-align: right;
+    vertical-align: top;
+    padding: 25px 0;
+  }
+}
+
 #about-me .col-large {
   display: block;
   width: 100%;
@@ -197,6 +229,16 @@ body {
     width: 80%;
     min-width: 600px;
     margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #about-me .col-large {
+    display: inline-block;
+    min-width: 400px;
+    max-width: 45%;
+    vertical-align: top;
+    width: 75%;
   }
 }
 
@@ -221,6 +263,13 @@ body {
   padding: 1rem 2rem;
 }
 
+@media all and (min-width: 1601px) {
+  #skills {
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+}
+
 #skills .col-small {
   display: block;
   width: 100%;
@@ -237,6 +286,18 @@ body {
     width: 80%;
     min-width: 600px;
     margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #skills .col-small {
+    display: inline-block;
+    max-width: 45%;
+    min-width: 400px;
+    width: 350px;
+    text-align: right;
+    vertical-align: top;
+    padding: 25px 0;
   }
 }
 
@@ -264,6 +325,16 @@ body {
   }
 }
 
+@media all and (min-width: 1025px) {
+  #skills .col-large {
+    display: inline-block;
+    min-width: 400px;
+    max-width: 45%;
+    vertical-align: top;
+    width: 75%;
+  }
+}
+
 #skills .col-large .col-list {
   display: inline-block;
   min-width: 23%;
@@ -288,6 +359,13 @@ body {
   padding: 1rem 2rem;
 }
 
+@media all and (min-width: 1601px) {
+  #featured-projects {
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+}
+
 #featured-projects .col-small {
   display: block;
   width: 100%;
@@ -307,6 +385,18 @@ body {
   }
 }
 
+@media all and (min-width: 1025px) {
+  #featured-projects .col-small {
+    display: inline-block;
+    max-width: 45%;
+    min-width: 400px;
+    width: 350px;
+    text-align: right;
+    vertical-align: top;
+    padding: 25px 0;
+  }
+}
+
 #featured-projects .col-large {
   display: block;
   width: 100%;
@@ -319,6 +409,16 @@ body {
     width: 80%;
     min-width: 600px;
     margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #featured-projects .col-large {
+    display: inline-block;
+    min-width: 400px;
+    max-width: 45%;
+    vertical-align: top;
+    width: 75%;
   }
 }
 
@@ -342,6 +442,14 @@ body {
   font-weight: 200;
   line-height: 1.5rem;
   padding: 1rem 2rem;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 1601px) {
+  #other-projects {
+    margin: 0 auto;
+    max-width: 1400px;
+  }
 }
 
 #other-projects .col-small {
@@ -363,6 +471,18 @@ body {
   }
 }
 
+@media all and (min-width: 1025px) {
+  #other-projects .col-small {
+    display: inline-block;
+    max-width: 45%;
+    min-width: 400px;
+    width: 350px;
+    text-align: right;
+    vertical-align: top;
+    padding: 25px 0;
+  }
+}
+
 #other-projects .col-large {
   display: block;
   width: 100%;
@@ -378,6 +498,16 @@ body {
   }
 }
 
+@media all and (min-width: 1025px) {
+  #other-projects .col-large {
+    display: inline-block;
+    min-width: 400px;
+    max-width: 45%;
+    vertical-align: top;
+    width: 75%;
+  }
+}
+
 #other-projects .col-large .title {
   padding: 10px 0;
   font-weight: 600;
@@ -387,6 +517,10 @@ body {
 }
 
 #other-projects .col-large .title a {
+  display: inline-block;
+}
+
+#other-projects .col-large .description {
   display: inline-block;
 }
 
