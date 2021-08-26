@@ -915,6 +915,10 @@ body {
   font-style: 2rem;
 }
 
+#other-projects .col-large .project.hide {
+  display: none;
+}
+
 #other-projects .col-large .fa {
   padding-left: 0.5rem;
   font-size: 1.2rem;
@@ -954,6 +958,23 @@ body {
   border: 1px solid #3D004D;
   border-radius: 8px;
   margin: 0.1rem;
+}
+
+#other-projects .selectors.technologies li {
+  min-width: 120px;
+  cursor: pointer;
+}
+
+#other-projects .selectors.technologies li:hover {
+  background-color: #C90020;
+  border: 1px solid #C90020;
+  color: #FFFFFF;
+}
+
+#other-projects .selectors.technologies .active {
+  background-color: #C90020;
+  border: 1px solid #C90020;
+  color: #FFFFFF;
 }
 
 #footer {

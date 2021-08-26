@@ -3,64 +3,6 @@
 @import './breakpoints';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&display=swap');
 
-// @mixin medium-padding-function {
-//     @include breakpoints(medium){
-//         width: 80%;
-//         min-width: 600px;
-//         margin: 0 auto;
-//     }
-// }
-
-// @mixin large-padding-function {
-//     width: 60%;
-//     min-width: 900px;
-//     margin: 0 auto;
-// }
-// @mixin large-header-responsive(){
-//     @include breakpoints(large){
-//         display: inline-block;
-//         max-width: 30%;
-//         min-width: 400px;
-//         text-align: right;
-//         vertical-align:top;
-//         padding: 25px 0;
-//     }
-// }
-// @mixin large-text-responsive(){
-//     @include breakpoints(large){
-//         display: inline-block;
-//         min-width: 400px;
-//         max-width: 45%;
-//         vertical-align:top;
-//         width: 75%;
-//     }
-// }
-
-// /*Padding function for the default mobile padding*/
-// @mixin mobile-padding(){
-//     display: block;
-//     width: 100%;
-//     min-width: 220px;
-//     padding: 1rem 0rem 1rem;
-//     @include medium-padding-function();
-
-// }
-
-
-// /* specific padding function*/
-// @mixin common-padding-intro {
-//     @include medium-padding-function();
-//     padding: 3rem 0 2rem;
-// }
-
-// @mixin common-descriptor-setup {
-//     min-width: 320px;
-//     width: 100%;
-//     text-align:left;
-//     padding: 1rem 2rem;
-
-// }
-
 /*Fonts*/
 /*Strong Tag */
 @mixin strong{
@@ -375,6 +317,7 @@ body{
     }
     .col-large{
         @include content-column();
+
         .title{
             @include strong();
             padding: 1rem 0;
@@ -390,6 +333,9 @@ body{
                     font-style: 2rem;
                 }
             }  
+        }
+        .project.hide{
+            display: none;
         }
         .fa{
             padding-left: 0.5rem;
@@ -419,7 +365,22 @@ body{
             }
         }
     }  
-   
+    .selectors.technologies{
+        li{
+            min-width: 120px;
+            cursor: pointer;
+            &:hover{
+                background-color: $primaryMiddle;
+                border: 1px solid $primaryMiddle;
+                color: $primaryLight;
+            }
+        }
+        .active{
+            background-color: $primaryMiddle;
+            border: 1px solid $primaryMiddle;
+            color: $primaryLight;
+        }
+    }
 }
 #footer{
      
