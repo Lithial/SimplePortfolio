@@ -295,10 +295,50 @@ body{
         @include title-column(left);
     }
     .col-large{
+        a{
+            text-decoration: none;
+            display: inline-block;
+            padding-bottom: 0.2rem;
+            i{
+                width: 3rem;
+                color: $primaryMiddle;
+            }
+        } 
+        .fa{
+            font-size: 1.5rem;
+            color: $primaryMiddle;
+            &:hover{
+                color: $secondaryDark;
+                transition: 0.4s;
+            }
+        }
+        #atlas-title{
+            display: block;
+        }
         .featured{
+            display: inline-block;
+            padding-right: 1rem;
             @include feature-font();
         }
         @include content-column();
+        .technologies{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        
+            @include breakpoints(medium){
+                flex-wrap:unset;
+            }
+            li{
+                white-space: nowrap;
+                color: $secondaryDark;
+                border: 1px solid $secondaryDark;
+                border-radius: 8px;
+                margin: 0.1rem;
+            }
+        }
     }
   
     #atlas-laptop{

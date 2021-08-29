@@ -650,7 +650,35 @@ body {
   max-width: 1000px;
 }
 
+#featured-projects .col-large a {
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+#featured-projects .col-large a i {
+  width: 3rem;
+  color: #C90020;
+}
+
+#featured-projects .col-large .fa {
+  font-size: 1.5rem;
+  color: #C90020;
+}
+
+#featured-projects .col-large .fa:hover {
+  color: #3D004D;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#featured-projects .col-large #atlas-title {
+  display: block;
+}
+
 #featured-projects .col-large .featured {
+  display: inline-block;
+  padding-right: 1rem;
   color: #C90020;
   font-size: 1.5rem;
   font-weight: 200;
@@ -725,6 +753,35 @@ body {
   #featured-projects .col-large {
     text-align: left;
   }
+}
+
+#featured-projects .col-large .technologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+@media all and (min-width: 641px) {
+  #featured-projects .col-large .technologies {
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+  }
+}
+
+#featured-projects .col-large .technologies li {
+  white-space: nowrap;
+  color: #3D004D;
+  border: 1px solid #3D004D;
+  border-radius: 8px;
+  margin: 0.1rem;
 }
 
 #featured-projects #atlas-laptop {
