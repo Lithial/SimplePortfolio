@@ -386,16 +386,18 @@ body{
                 transition: 0.4s;
             }
         }
+        ul{
+            max-width: 100%;
+            max-width: 100%;
+        }
         .technologies{
+            max-width: 100%;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             margin: 0;
             padding: 0;
         
-            @include breakpoints(medium){
-                flex-wrap:unset;
-            }
             li{
                 white-space: nowrap;
                 color: $secondaryDark;
@@ -405,7 +407,9 @@ body{
             }
         }
     }  
+
     .selectors.technologies{
+     
         li{
             min-width: 120px;
             cursor: pointer;

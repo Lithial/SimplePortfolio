@@ -988,7 +988,13 @@ body {
   transition: 0.4s;
 }
 
+#other-projects .col-large ul {
+  max-width: 100%;
+  max-width: 100%;
+}
+
 #other-projects .col-large .technologies {
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1000,13 +1006,6 @@ body {
       flex-wrap: wrap;
   margin: 0;
   padding: 0;
-}
-
-@media all and (min-width: 641px) {
-  #other-projects .col-large .technologies {
-    -ms-flex-wrap: unset;
-        flex-wrap: unset;
-  }
 }
 
 #other-projects .col-large .technologies li {
